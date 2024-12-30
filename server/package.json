@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "app.js",
   "scripts": {
-    "start": "ts-node dist/app.js",
+    "start": "ts-node src/app.ts",
     "build": "tsc",
     "dev": "nodemon --watch 'src/**/*' --exec 'ts-node src/app.ts'"
   },
@@ -28,6 +28,7 @@
     "passport-local": "^1.0.0",
     "pdfjs-dist": "^3.11.174",
     "resend": "^4.0.0",
+    "server": "file:",
     "stripe": "^17.2.0"
   },
   "devDependencies": {
