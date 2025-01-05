@@ -60,11 +60,11 @@ app.use(
 
 app.use(passport.initialize());
 app.use(passport.session());
-/* 
+
 app.use("/auth", authRoute);
 app.use("/contracts", contractsRoute);
 app.use("/payments", paymentsRoute);
- */
+
 const PORT = 8080;
 app.listen(PORT, () => {
   console.log(`Server started on port ${PORT}`);
