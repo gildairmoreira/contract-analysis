@@ -12,12 +12,11 @@ import MongoStore from "connect-mongo";
 import "./config/passport";
 
 // routes
-/* 
 import authRoute from "./routes/auth";
-import contractsRoute from "./routes/contracts.ts";
+/* import contractsRoute from "./routes/contracts.ts";
 import paymentsRoute from "./routes/payments";
-import { handleWebhook } from "./controllers/payment.controller"; 
-*/
+import { handleWebhook } from "./controllers/payment.controller";  */
+
 
 const app = express();
 
@@ -61,9 +60,9 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 
-app.use("/auth", authRoute);
+app.use("/auth", authRoute);/* 
 app.use("/contracts", contractsRoute);
-app.use("/payments", paymentsRoute);
+app.use("/payments", paymentsRoute); */
 
 const PORT = 8080;
 app.listen(PORT, () => {
