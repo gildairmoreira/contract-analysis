@@ -12,14 +12,16 @@ passport.use(
     async (accessToken, refreshToken, profile, done) => {
       try {
         let user = await User.findOne({ googleId: profile.id });
+
         if (!user) {
-          user = await new User({
+          user = await User.create({
             googleId: profile.id,
             email: profile.emails![0].value,
             displayName: profile.displayName,
             profilePicture: profile.photos![0].value,
           });
         }
+
         done(null, user);
       } catch (error) {
         done(error as Error, undefined);
